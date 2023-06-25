@@ -1,0 +1,49 @@
+<div class="mat-elevation-z8 Booking">
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="joinedDate">
+      <th mat-header-cell *matHeaderCellDef>Booking Time</th>
+      <td mat-cell *matCellDef="let element">{{ element.joinedDate | date }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="userAddress">
+      <th mat-header-cell *matHeaderCellDef>Patient Address</th>
+      <td mat-cell *matCellDef="let element">{{ element.userAddress }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="userCity">
+      <th mat-header-cell *matHeaderCellDef>Patient City</th>
+      <td mat-cell *matCellDef="let element">{{ element.userCity }}</td>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="service">
+      <th mat-header-cell *matHeaderCellDef>Service</th>
+      <td mat-cell *matCellDef="let element">{{ element.service }}</td>
+    </ng-container> -->
+
+    <ng-container matColumnDef="userName">
+      <th mat-header-cell *matHeaderCellDef>Patient Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.userName }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="NurseId">
+      <th mat-header-cell *matHeaderCellDef>Nurse ID</th>
+      <td mat-cell *matCellDef="let element">{{ element.NurseId }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef>Price</th>
+      <td mat-cell *matCellDef="let element">{{ element.price }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>status</th>
+      <td mat-cell *matCellDef="let element">{{ element.status }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[10,15 ,20]" showFirstLastButtons aria-label="Select page of bookings">
+  </mat-paginator>
+</div>

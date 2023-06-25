@@ -1,0 +1,21 @@
+.size{
+    width: 80%;
+    margin: 0 auto ;
+    /* direction: rtl; */
+    text-align: left;
+    color: var(--dark);
+}
+.form-label{
+    margin-bottom: 1px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.btn-primary{
+    background-color: #3C91E6 !important;
+    transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover{
+    background-color: white !important;
+    color: #3C91E6 !important;
+    border: 1px solid #3C91E6 !important;
+}

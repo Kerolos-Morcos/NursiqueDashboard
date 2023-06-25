@@ -1,0 +1,67 @@
+<form>
+  <div class="form-input dev">
+    <input type="text"(keydown.enter)="test($event,sea.value)"  #sea  placeholder="Search...">
+        <button  type="button"  (click)="search(sea.value)" class="search-btn"><i class='bx bx-search'></i></button>
+   </div>
+ </form>
+
+<div class="mat-elevation-z8 nurse" >
+    <table mat-table [dataSource]="dataSource">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="profile">
+        <th mat-header-cell *matHeaderCellDef> الصورة </th>
+        <td mat-cell *matCellDef="let element"> 
+          <img width="70px" height="70px"  class="img" src="http://localhost:3500/{{element.profile}}" alt="" srcset=""> </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+    
+      <!-- Weight Column -->
+      <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef> age </th>
+        <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="region">
+        <th mat-header-cell *matHeaderCellDef> region </th>
+        <td mat-cell *matCellDef="let element"> {{element.region}} </td>
+      </ng-container>
+  
+       <!-- Symbol Column -->
+       <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef> address </th>
+        <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+      </ng-container>
+       <!-- Symbol Column -->
+       <ng-container matColumnDef="email">
+         <th mat-header-cell *matHeaderCellDef> email </th>
+         <td mat-cell *matCellDef="let element"> {{element.email  | StringLength: 10}} </td>
+        </ng-container> <!-- Symbol Column -->
+        <ng-container matColumnDef="gender">
+          <th mat-header-cell *matHeaderCellDef> gender </th>
+          <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+        </ng-container> <!-- Symbol Column -->
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef> date </th>
+          <!-- <td mat-cell *matCellDef="let element"> {{element.joinedDate}} </td> -->
+        </ng-container>
+        <ng-container matColumnDef="phone">
+         <th mat-header-cell *matHeaderCellDef> delete </th>
+         <td mat-cell *matCellDef="let element"><a  (click)="deleteRow(element._id)"> <i class="fa fa-trash fa-fade" style="cursor: pointer;"></i> </a> </td>
+       </ng-container> <!-- Symbol Column -->
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator  [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>

@@ -1,0 +1,9 @@
+<app-loader *ngIf="isloading | async" ></app-loader>
+<ng-container *ngIf="name">
+    <app-navbar></app-navbar>
+  </ng-container>
+  
+  <ng-container *ngIf="!name">
+    <app-login></app-login>
+  </ng-container>
+    

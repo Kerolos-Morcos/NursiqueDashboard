@@ -1,0 +1,156 @@
+	<!-- Box icons -->
+	<!-- My CSS -->
+	<!-- SIDEBAR -->
+
+	<section id="sidebar" #sidebar>
+		<a href="#" class="brand" id="brand" #brand>
+			<i class='bx bxs-smile'></i>
+			<span class="text">Nursique</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a routerLink="/">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a routerLink="nurse">
+					<svg class="bx" xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 16 16"><path fill="currentColor" d="M14 11.3c-1-1.9-2-1.6-3.1-1.7c.1.3.1.6.1 1c1.6.4 2 2.3 2 3.4v1h-2v-1h1s0-2.5-1.5-2.5S9 13.9 9 14h1v1H8v-1c0-1.1.4-3.1 2-3.4c0-.6-.1-1.1-.2-1.3c-.2-.1-.4-.3-.4-.6c0-.6.8-.4 1.4-1.5c0 0 .9-2.3.6-4.3h-1c0-.2.1-.3.1-.5s0-.3-.1-.5h.8C10.9.9 9.9 0 8 0C6.1 0 5.1.9 4.7 2h.8c0 .2-.1.3-.1.5s0 .3.1.5h-1c-.2 2 .6 4.3.6 4.3c.6 1 1.4.8 1.4 1.5c0 .5-.5.7-1.1.8c-.2.2-.4.6-.4 1.4v1.2c.6.2 1 .8 1 1.4c0 .7-.7 1.4-1.5 1.4S3 14.3 3 13.5c0-.7.4-1.2 1-1.4v-1.2c0-.5.1-.9.2-1.3c-.7.1-1.5.4-2.2 1.7c-.6 1.1-.9 4.7-.9 4.7h13.7c.1 0-.2-3.6-.8-4.7zM6.5 2.5C6.5 1.7 7.2 1 8 1s1.5.7 1.5 1.5S8.8 4 8 4s-1.5-.7-1.5-1.5z"/><path fill="currentColor" d="M5 13.5a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0z"/></svg>
+					<span class="text">Nurses</span>
+				</a>
+			</li>
+			<li>
+				<a routerLink="patient">
+					<i class='bx bx-body' style="font-size: 26px;"></i>
+					<span class="text">Patients</span>
+				</a>
+			</li>
+			<li>
+				<a routerLink="device">
+					<svg class="bx" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22"><path fill="currentColor" d="M19 18.5a2.5 2.5 0 0 1-2.5 2.5a2.5 2.5 0 0 1-2.5-2.5c0-1.03.62-1.91 1.5-2.29V6H11v1.35c1.22.58 2 1.8 2 3.15V22H6V10.5c0-1.35.78-2.57 2-3.15V6H6V4h2v-.5A1.5 1.5 0 0 1 9.5 2A1.5 1.5 0 0 1 11 3.5V4h4.5a2 2 0 0 1 2 2v10.21c.88.38 1.5 1.26 1.5 2.29Z"/></svg>
+					<span class="text">Devices</span>
+				</a>
+			</li>
+			<!-- <li>
+				<a routerLink="post">
+					<i class='bx bxs-message-square-detail' style="font-size: 18px;"></i>
+					<span class="text">Posts</span>
+				</a>
+			</li> -->
+			<li>
+				<a routerLink="booking">
+					<svg class="bx"  xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M3 4.5A2.5 2.5 0 0 1 5.5 2H17a2.5 2.5 0 0 1 2.5 2.5v6.813a6.475 6.475 0 0 0-1.5-.294V4.5a1 1 0 0 0-1-1H5.5a1 1 0 0 0-1 1V18h6.519c.04.52.14 1.022.294 1.5H4.5a1 1 0 0 0 1 1h6.232A6.518 6.518 0 0 0 12.81 22H5.5A2.5 2.5 0 0 1 3 19.5v-15ZM17.5 12a5.5 5.5 0 1 1 0 11a5.5 5.5 0 0 1 0-11Zm.501 8.503V18h2.502a.5.5 0 1 0 0-1H18v-2.5a.5.5 0 1 0-1 0V17h-2.504a.5.5 0 0 0 0 1h2.505v2.503a.5.5 0 1 0 1 0ZM6 6a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V6Zm1.5 1.5h7v-1h-7v1Z"/></svg>
+					<span class="text">Booking</span>
+				</a>
+			</li>
+			<li>
+				<a routerLink="order">
+					<i class='bx bxs-cart-add' style="font-size: 22px;"></i>
+					<span class="text">Orders</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a   class="logout d-flex w-75" (click)="logout()">
+					<!-- <a routerLink="login" class="logout"> -->
+					<span class="text d-flex align-items-center justify-content-center"><i class='bx bx-log-out' ></i> Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content" #content>
+		<!-- NAVBAR -->
+		<nav #nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<!-- <div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div> -->
+			</form>
+			<input type="checkbox" id="switch-mode" (click)="display($event.target)" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+
+
+
+
+			<!-- <a href="#" class="notification" >
+				<i class='bx bxs-bell' ></i>
+				<span class="num">3</span>
+			</a> -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			<p>   {{name}}</p>
+			<a href="#" class="profile  me-3">
+				<ng-container *ngIf="!pic">
+				  <i class="fa-solid fa-user-doctor fa-fade fa-2xl" style="color: #578be5;"></i>
+				</ng-container>
+				<img *ngIf="pic !== ''" [style.display]="pic ? 'block' : 'none'" src="http://localhost:3500/{{pic}}">							  </a>
+	
+
+
+
+			 
+
+
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<div  class="router-Animations" [@routeMove]="o.isActivated? o.activatedRoute:''">
+
+			<main  >
+				
+				<!-- BEGIN: Main Color Switcher-->
+			<!-- <div
+				class="shadow-md fixed bottom-0 right-0 box border rounded-full h-12 px-5 flex items-center justify-center z-50 mb-10 mr-52">
+				<div class="mr-4 hidden sm:block text-slate-600 dark:text-slate-200">Color Scheme</div>
+<a href="http://rubick.left4code.com/page/side-menu/light/dashboard-overview-1?color_scheme=default"
+class="block w-8 h-8 cursor-pointer bg-blue-800 rounded-full border-4 mr-1 hover:border-slate-200 border-white dark:border-darkmode-600"></a>
+<a href="http://rubick.left4code.com/page/side-menu/light/dashboard-overview-1?color_scheme=theme-1"
+	class="block w-8 h-8 cursor-pointer bg-emerald-900 rounded-full border-4 mr-1 hover:border-slate-200 border-slate-300 dark:border-darkmode-800/80"></a>
+<a href="http://rubick.left4code.com/page/side-menu/light/dashboard-overview-1?color_scheme=theme-2"
+class="block w-8 h-8 cursor-pointer bg-blue-900 rounded-full border-4 mr-1 hover:border-slate-200 border-white dark:border-darkmode-600"></a>
+<a href="http://rubick.left4code.com/page/side-menu/light/dashboard-overview-1?color_scheme=theme-3"
+	class="block w-8 h-8 cursor-pointer bg-cyan-900 rounded-full border-4 mr-1 hover:border-slate-200 border-white dark:border-darkmode-600"></a>
+<a href="http://rubick.left4code.com/page/side-menu/light/dashboard-overview-1?color_scheme=theme-4"
+	class="block w-8 h-8 cursor-pointer bg-indigo-900 rounded-full border-4 hover:border-slate-200 border-white dark:border-darkmode-600"></a>
+</div> -->
+<!-- END: Main Color Switcher -->
+<!-- Colors -->
+			<router-outlet #o="outlet" ></router-outlet>
+		</main>
+		</div>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	
+
+	
+
+
+

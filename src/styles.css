@@ -1,0 +1,102 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+ /* Pagination Selector */
+ .ng-tns-c216810298-2{
+    border: none !important;
+    /* color: #009EFB !important; */
+}
+.mat-mdc-paginator-page-size-select{
+    /* background-color: white; */
+}
+/* Pagination Selector */
+
+/* Paginator Section */
+.mat-mdc-paginator-container{
+    background-image: linear-gradient(to right, #2aa9f3, #2aa9f3);
+    color: white;
+}
+/* Paginator Section */
+
+/* All Table Text  */
+.ng-star-inserted{
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center !important;
+}
+/* All Table Text */
+
+/* Table Header (Meta) */
+.mat-mdc-table {
+    /* background-image: linear-gradient(to right, #20acfd, #009ffbd0); */
+    /* background-color: #009EFB; */
+}
+.mdc-data-table__table thead{
+    background-image: linear-gradient(to right, #2aa9f3, #2aa9f3) !important;
+}
+/* Table Header (Meta) */
+
+/* Table Data */
+.mdc-data-table__content td{
+    color: black !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+/* Table Data */
+
+/* Next & Previous Paginator Buttons  */
+.mat-mdc-icon-button[disabled][disabled]{
+    background-color: white;
+    margin-left: 5px;
+}
+/* Next & Previous Paginator Buttons  */
+
+/* General Del Icon  */
+.fa-trash{
+    color: #DB504A;
+    transition: all 0.2s ease-in-out;
+}
+.fa-trash:hover{
+    color: red;
+    transform: rotate(360deg);
+}
+/* General Del Icon  */
+
+
+/* Dark Mode */
+:root {
+	--poppins: 'Poppins', sans-serif;
+	--lato: 'Lato', sans-serif;
+
+	--light: #F9F9F9;
+	--blue: #3C91E6;
+	--light-blue: #CFE8FF;
+	--grey: #eee;
+	--dark-grey: #AAAAAA;
+	--dark: #342E37;
+	--red: #DB504A;
+	--yellow: #FFCE26;
+	--light-yellow: #FFF2C6;
+	--orange: #FD7238;
+	--light-orange: #FFE0D3;
+}
+
+body{
+    transition: all 0.5s ease-in-out;
+    margin: 0% ;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.dark {
+	background-color: #0C0C1E  !important;
+	color: #FBFBFB !important;
+}
+
+/* element.style {
+} */
+#content[_ngcontent-ng-c4174627133] main[_ngcontent-ng-c4174627133] {
+    width: 100%;
+    padding: 36px 24px;
+    font-family: var(--poppins);
+    max-height: calc(100vh - 56px);
+}

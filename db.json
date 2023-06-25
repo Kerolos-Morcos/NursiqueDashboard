@@ -1,0 +1,203 @@
+{
+  "sales": [
+    {
+      "year": 2015,
+      "amount": 5000,
+      "colorcode": "rgba(77, 157, 77, 0.8)"
+    },
+    {
+      "year": 2016,
+      "amount": 6500,
+      "colorcode": "rgba(255, 206, 38, 0.8)"
+    },
+    {
+      "year": 2017,
+      "amount": 2000,
+      "colorcode": "rgba(219, 80, 74, 0.8)"
+    },
+    {
+      "year": 2018,
+      "amount": 6500,
+      "colorcode": "rgba(60, 145, 230, 0.8)"
+    },
+    {
+        "year": 2019,
+        "amount": 4000,
+        "colorcode": "rgba(128, 128, 128, 0.8)"
+    },
+    {
+      "year": 2020,
+      "amount": 7000,
+      "colorcode": "rgba(253, 114, 56, 0.8)"
+    }
+  ]
+
+,  "patients": [
+    {
+      "month": "Jan",
+      "visits": 5000,
+      "colorcode": "rgba(77, 157, 77, 0.8)"
+    },
+    {
+      "month": "Feb",
+      "visits": 6500,
+      "colorcode": "rgba(255, 206, 38, 0.8)"
+    },
+    {
+      "month": "Mar",
+      "visits": 2000,
+      "colorcode": "rgba(219, 80, 74, 0.8)"
+    },
+    {
+      "month": "Apr",
+      "visits": 6500,
+      "colorcode": "rgba(60, 145, 230, 0.8)"
+    },
+    {
+      "month": "May",
+      "visits": 4000,
+      "colorcode": "rgba(128, 128, 128, 0.8)"
+    },
+    {
+      "month": "Jun",
+      "visits": 7000,
+      "colorcode": "rgba(253, 114, 56, 0.8)"
+    }
+  ],
+  
+    "devices": [
+      {
+        "month": "Jan",
+        "numDevices": 50,
+        "colorcode": "rgba(77, 157, 77, 0.8)"
+      },
+      {
+        "month": "Feb",
+        "numDevices": 65,
+        "colorcode": "rgba(255, 206, 38, 0.8)"
+      },
+      {
+        "month": "Mar",
+        "numDevices": 20,
+        "colorcode": "rgba(219, 80, 74, 0.8)"
+      },
+      {
+        "month": "Apr",
+        "numDevices": 65,
+        "colorcode": "rgba(60, 145, 230, 0.8)"
+      },
+      {
+        "month": "May",
+        "numDevices": 40,
+        "colorcode": "rgba(128, 128, 128, 0.8)"
+      },
+      {
+        "month": "Jun",
+        "numDevices": 70,
+        "colorcode": "rgba(253, 114, 56, 0.8)"
+      }
+    ],
+    
+      "nurses": [
+        {
+          "month": "Jan",
+          "numNurses": 20,
+          "colorcode": "rgba(77, 157, 77, 0.8)"
+        },
+        {
+          "month": "Feb",
+          "numNurses": 30,
+          "colorcode": "rgba(255, 206, 38, 0.8)"
+        },
+        {
+          "month": "Mar",
+          "numNurses": 10,
+          "colorcode": "rgba(219, 80, 74, 0.8)"
+        },
+        {
+          "month": "Apr",
+          "numNurses": 30,
+          "colorcode": "rgba(60, 145, 230, 0.8)"
+        },
+        {
+          "month": "May",
+          "numNurses": 15,
+          "colorcode": "rgba(128, 128, 128, 0.8)"
+        },
+        {
+          "month": "Jun",
+          "numNurses": 40,
+          "colorcode": "rgba(253, 114, 56, 0.8)"
+        }
+      ],
+      
+        "orders": [
+          {
+            "month": "Jan",
+            "numOrders": 100,
+            "colorcode": "rgba(77, 157, 77, 0.8)"
+          },
+          {
+            "month": "Feb",
+            "numOrders": 120,
+            "colorcode": "rgba(255, 206, 38, 0.8)"
+          },
+          {
+            "month": "Mar",
+            "numOrders": 80,
+            "colorcode": "rgba(219, 80, 74, 0.8)"
+          },
+          {
+            "month": "Apr",
+            "numOrders": 150,
+            "colorcode": "rgba(60, 145, 230, 0.8)"
+          },
+          {
+            "month": "May",
+            "numOrders": 90,
+            "colorcode": "rgba(128, 128, 128, 0.8)"
+          },
+          {
+            "month": "Jun",
+            "numOrders": 200,
+            "colorcode": "rgba(253, 114, 56, 0.8)"
+          }
+        ],
+        
+          "bookings": [
+            {
+              "month": "Jan",
+              "numBookings": 50,
+              "colorcode": "rgba(77, 157, 77, 0.8)"
+            },
+            {
+              "month": "Feb",
+              "numBookings": 65,
+              "colorcode": "rgba(255, 206, 38, 0.8)"
+            },
+            {
+              "month": "Mar",
+              "numBookings": 20,
+              "colorcode": "rgba(219, 80, 74, 0.8)"
+            },
+            {
+              "month": "Apr",
+              "numBookings": 65,
+              "colorcode": "rgba(60, 145, 230, 0.8)"
+            },
+            {
+              "month": "May",
+              "numBookings": 40,
+              "colorcode": "rgba(128, 128, 128, 0.8)"
+            },
+            {
+              "month": "Jun",
+              "numBookings": 70,
+              "colorcode": "rgba(253, 114, 56, 0.8)"
+            }
+          ]
+        }
+
+
+
+ 

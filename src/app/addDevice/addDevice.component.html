@@ -1,0 +1,91 @@
+<div class="container size">
+  <form class="row g-3" [formGroup]="form" (ngSubmit)="send()">
+
+    <div class="col-12">
+      <label for="validationCustom01" class="form-label">Device Name</label>
+      <input type="text" class="form-control" id="validationCustom01" formControlName="name" [ngClass]="{ 
+            'is-valid': form.controls['name'].valid && form.controls['name'].touched,
+            'is-invalid': form.controls['name'].invalid && form.controls['name'].touched,
+         }" />
+      <div class="invalid-feedback" *ngIf="form.controls['name'].invalid && form.controls['name'].touched">
+        <span *ngIf="form.controls['name'].hasError('required')">Please provide a enter User name.</span>
+      </div>
+      <div class="valid-feedback" *ngIf="form.controls['name'].valid">
+        Looks good!
+      </div>
+    </div>
+
+    <div class="col-12">
+      <label for="validationCustom02" class="form-label">price</label>
+      <input type="text" class="form-control" id="validationCustom02" formControlName="price" [ngClass]="{ 
+            'is-valid': form.controls['price'].valid && form.controls['price'].touched,
+            'is-invalid': form.controls['price'].invalid && form.controls['price'].touched,
+         }" />
+      <div class="valid-feedback" *ngIf="form.controls['price'].valid">
+        Looks good!
+      </div>
+      <div class="invalid-feedback" *ngIf="form.controls['price'].invalid && form.controls['price'].touched">
+        <span *ngIf="form.controls['price'].hasError('required')">Please provide a enter price.</span>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <label for="validationCustom02" class="form-label">Quantity</label>
+      <input type="text" class="form-control" id="validationCustom02" formControlName="quantity" [ngClass]="{ 
+            'is-valid': form.controls['quantity'].valid && form.controls['quantity'].touched,
+            'is-invalid': form.controls['quantity'].invalid && form.controls['quantity'].touched,
+         }" />
+      <div class="valid-feedback" *ngIf="form.controls['quantity'].valid">
+        Looks good!
+      </div>
+      <div class="invalid-feedback" *ngIf="
+          form.controls['quantity'].invalid && form.controls['quantity'].touched
+        ">
+        <span *ngIf="form.controls['quantity'].hasError('required')">Please provide a enter Quantity.</span>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <label for="validationCustom02" class="form-label">category</label>
+      <input type="text" class="form-control" id="validationCustom02" formControlName="category" [ngClass]="{ 
+            'is-valid': form.controls['category'].valid && form.controls['category'].touched,
+            'is-invalid': form.controls['category'].invalid && form.controls['category'].touched,
+         }" />
+      <div class="valid-feedback" *ngIf="form.controls['category'].valid">
+        Looks good!
+      </div>
+      <div class="invalid-feedback" *ngIf="form.controls['category'].invalid && form.controls['category'].touched">
+        <span *ngIf="form.controls['category'].hasError('required')">Please provide a enter category.</span>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <label for="validationCustom02" class="form-label">details</label>
+      <input type="text" class="form-control" id="validationCustom02" formControlName="details" [ngClass]="{ 
+            'is-valid': form.controls['details'].valid && form.controls['details'].touched,
+            'is-invalid': form.controls['details'].invalid && form.controls['details'].touched,
+         }" />
+      <div class="valid-feedback" *ngIf="form.controls['details'].valid">
+        Looks good!
+      </div>
+      <div class="invalid-feedback" *ngIf="
+          form.controls['details'].invalid &&
+          form.controls['details'].touched
+        ">
+        <span *ngIf="form.controls['details'].hasError('required')">Please provide a enter Phone Number.</span>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <label class="btn btn-primary form-label" for="sawy">Upload Device Image (minimum 3 pics)</label>
+      <span>{{fileName}}</span>
+      <input multiple id="sawy" class="form-control" type="file" hidden (change)="add($event)">
+    </div>
+
+    <div class="col-6">
+      <button class="btn btn-primary" type="submit" [disabled]="form.invalid ||imageslist.length!=3 ">
+        Add Device 
+      </button>
+    </div>
+  </form>
+</div>

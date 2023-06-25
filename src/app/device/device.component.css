@@ -1,0 +1,82 @@
+
+.dev {
+    margin-top: 16px ;
+    /* width: 80%; */
+  }
+button ,mat-icon {
+      transition: all 0.3s linear;
+}
+mat-icon:hover{
+    color: green;
+}
+
+.img{
+    border-radius: 50%;
+    margin: 10px
+}
+.add{
+    float: right;
+    margin-top: -17px;
+	background-color: #3C91E6 !important;
+}
+.add:hover{
+    background-color: white !important;
+    color: #3C91E6 !important;
+    border: 1px solid #3C91E6 !important;
+}
+
+
+.pag{
+    direction: ltr !important; 
+}
+
+form{
+    width: 18.75rem;
+  }
+  form .form-input {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  }
+  form .form-input input {
+  flex-grow: 1;
+  padding: 0 16px;
+  height: 100%;
+  border: none;
+  background: #eee;
+  border-radius: 36px 0 0 36px;
+  outline: none;
+  width: 100%;
+  color:#342E37;
+    margin-top: -40px;
+  }
+  form .form-input button {
+    margin-top: -40px;
+  width: 36px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3C91E6;
+  color: #F9F9F9;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 0 36px 36px 0;
+  cursor: pointer;
+  }
+
+ .del{
+  background-color: none !important;
+  background: none !important;
+  border: none;
+  color:red;
+ }
+
+ button.mat-icon-button {
+  background-color: transparent;
+}
+
+button.mat-icon-button:hover {
+  background-color: transparent;
+}

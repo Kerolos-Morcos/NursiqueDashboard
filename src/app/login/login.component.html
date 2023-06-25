@@ -1,0 +1,81 @@
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-85 p-b-20">
+            <form class="login100-form validate-form" [formGroup]="form" (ngSubmit)="login()">
+                <span class="login100-form-title p-b-70">
+                    Welcome
+                </span>
+                <span class="login100-form-avatar">
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M96 128V70.2c0-13.3 8.3-25.3 20.8-30l96-36c7.2-2.7 15.2-2.7 22.5 0l96 36c12.5 4.7 20.8 16.6 20.8 30V128h-.3c.2 2.6 .3 5.3 .3 8v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V136c0-2.7 .1-5.4 .3-8H96zm48 48c0 44.2 35.8 80 80 80s80-35.8 80-80V160H144v16zM111.9 327.7c10.5-3.4 21.8 .4 29.4 8.5l71 75.5c6.3 6.7 17 6.7 23.3 0l71-75.5c7.6-8.1 18.9-11.9 29.4-8.5C401 348.6 448 409.4 448 481.3c0 17-13.8 30.7-30.7 30.7H30.7C13.8 512 0 498.2 0 481.3c0-71.9 47-132.7 111.9-153.6zM208 48V64H192c-4.4 0-8 3.6-8 8V88c0 4.4 3.6 8 8 8h16v16c0 4.4 3.6 8 8 8h16c4.4 0 8-3.6 8-8V96h16c4.4 0 8-3.6 8-8V72c0-4.4-3.6-8-8-8H240V48c0-4.4-3.6-8-8-8H216c-4.4 0-8 3.6-8 8z"/></svg> -->
+                  <img src="../../assets/imgs/user_img.jpg" alt="AVATAR">
+                </span>
+                <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="Enter username">
+                    <input class="input100" placeholder="email" type="text" name="email"
+                    formControlName="email"
+                    [ngClass]="{ 
+                      'is-valid': form.controls['email'].valid && form.controls['email'].touched,
+                      'is-invalid': form.controls['email'].invalid && form.controls['email'].touched,
+                    }">
+                    <div
+                    class="invalid-feedback"
+                    *ngIf="
+                      form.controls['email'].invalid && form.controls['email'].touched
+                    "
+                  >
+                    <span *ngIf="form.controls['email'].hasError('required')"
+                      >Please provide a enter Email.</span
+                    >
+                    <span *ngIf="form.controls['email'].hasError('pattern')"
+                      >Please provide a valid Pattern like : test_30@company.com .</span
+                    >
+                  </div>
+                  <div class="valid-feedback" *ngIf="form.controls['email'].valid">
+                    Looks good!
+                  </div>
+                 </div>
+
+
+
+                <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                    <input class="input100" placeholder="Password" type="password" name="password"
+                    formControlName="password"
+                    [ngClass]="{ 
+                        'is-valid': form.controls['password'].valid && form.controls['password'].touched ,
+                        'is-invalid': form.controls['password'].invalid && form.controls['password'].touched,
+                      }"
+                    >
+                    <!-- <span (click)="change()" class="input-group-text" id="inputGroupPrepend2">
+                        <i *ngIf="passType=='text'" class="fa fa-eye"></i>
+                        <i *ngIf="passType == 'password'" class="fa fa-eye-slash"></i>
+                      </span>
+               -->
+                      <div
+                        class="invalid-feedback"
+                        *ngIf="
+                          form.controls['password'].invalid &&
+                          form.controls['password'].touched
+                        "
+                      >
+                        <span *ngIf="form.controls['password'].hasError('required')"
+                          >Please provide a enter Password.</span
+                        >
+                        <span *ngIf="form.controls['password'].hasError('minlength')"
+                          >Please provide a valid Password with atleast 8 caracter.</span
+                        >
+                      </div>
+                      <div class="valid-feedback" *ngIf="form.controls['password'].valid">
+                        Looks good!
+                      </div>
+
+                    </div>
+                    <span class="focus-input100"></span>
+                <!-- </div> -->
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" type="submit" [disabled]="form.invalid">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
