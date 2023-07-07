@@ -57,23 +57,44 @@ export class PatientComponent implements OnInit, AfterViewInit {
 
   data: any; // assuming that you have defined this variable in your component
 
+  // block(id: string) {
+  //   this.patSrv.block(id, this.data).subscribe({
+  //     next: (res) => {
+  //       this.patSrv.getAll().subscribe({
+  //         next: (res) => {
+  //           const patients = res.data as IPatient[];
+  //           this.dataSource.data = patients;
+  //           this.dataSource.paginator = this.paginator;
+  //           console.log(res.data[0].isBlocked);
+  //         }
+  //       });
+  //     },
+  //     error: (err) => {
+  //       console.log(err); // handle the error as needed
+  //     }
+  //   });
+  // }
+
   block(id: string) {
     this.patSrv.block(id, this.data).subscribe({
       next: (res) => {
-        this.patSrv.getAll().subscribe({
-          next: (res) => {
-            const patients = res.data as IPatient[];
-            this.dataSource.data = patients;
-            this.dataSource.paginator = this.paginator;
-            console.log(res.data[0].isBlocked);
-          }
-        });
+        // Toggle the isBlocked value of the patient in the data source
+        const patient = this.dataSource.data.find((p) => p._id === id);
+        if (patient) {
+          patient.isBlocked = !patient.isBlocked;
+        }
+        
+        // Update the data source and paginator
+        this.dataSource.data = [...this.dataSource.data];
+        this.dataSource.paginator = this.paginator;
       },
       error: (err) => {
-        console.log(err); // handle the error as needed
+        console.log(err);
+        // Handle the error as needed
       }
     });
   }
+  
 
   search(value: string): void {
     this.patSrv.search(value).subscribe({

@@ -1,6 +1,7 @@
  
  export interface IPatient {
-    name: string;
+  _id: string;
+  name: string;
    email: string;
    password?: string;
    phoneNumber: string;
@@ -13,5 +14,5 @@
    profile: string;
    region: string;
    address: string;
-   isBlocked: 'pending' | 'done'| 'cancelled';
+   isBlocked: boolean;
  }

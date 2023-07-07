@@ -75,8 +75,7 @@
   <th mat-header-cell *matHeaderCellDef>block</th> 
   <td mat-cell *matCellDef="let element">
     <a mat-icon-button (click)="block(element._id)">
-      <mat-icon><i class="fa-solid fa-ban fa-fade fa-lg" style="color: #cc0000;"></i></mat-icon>
-    </a> 
+      <mat-icon [attr.class]="element.isBlocked ? 'fa-solid fa-check fa-fade fa-lg text-success' : 'fa-solid fa-times fa-fade fa-lg text-danger'" ></mat-icon>    </a> 
   </td>
 </ng-container>
  
