@@ -25,16 +25,20 @@
       </ng-container>
 
        <!-- Symbol Column -->
-       <ng-container matColumnDef="patientStatus">
+       <!-- <ng-container matColumnDef="patientStatus">
         <th mat-header-cell *matHeaderCellDef> Status </th>
         <td mat-cell *matCellDef="let element"> {{element.patientStatus}} </td>
-      </ng-container>
-
-       <!-- Symbol Column -->
-       <!-- <ng-container matColumnDef="totalPrice">
-        <th mat-header-cell *matHeaderCellDef> Total Price </th>
-        <td mat-cell *matCellDef="let element"> {{element.totalPrice}} </td>
       </ng-container> -->
+
+      <ng-container matColumnDef="patientStatus">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element">
+          <button style="width: 90px;" mat-icon-button [ngStyle]="getStatusButtonColor(element.patientStatus)"
+                  (click)="togglePatientStatus(element)">
+            <mat-icon style="width: 100%;">{{element.patientStatus}}</mat-icon>
+          </button>
+        </td>
+      </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

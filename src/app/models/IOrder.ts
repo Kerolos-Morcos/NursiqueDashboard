@@ -11,6 +11,7 @@
 // }
 
 export interface IOrder {
+    _id: string;
     userName: string;
     email?: string;
     userAge?: number;
@@ -22,7 +23,7 @@ export interface IOrder {
     startDate: string | Date;
     endDate: string | Date;
     products?: any[];
-    patientStatus: 'pending' | 'inprogress' | 'Expired' | 'reached';
+    patientStatus: 'قيد الإنتظار' | 'قيد التقدم' | 'مُلغى' | 'وصل بنجاح';
     totalPrice: number;
     createdAt?: string | Date;
     updatedAt?: string | Date;

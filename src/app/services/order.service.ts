@@ -13,4 +13,12 @@ export class OrderService {
     getAllOrders(){
       return this.http.get<APIResult>(this.originalPath);
     } 
+
+
+    // New By Kero
+    originalPathStatus = "http://localhost:3500/order";
+    updatePatientStatus(orderId: string, patientStatus: string) {
+      return this.http.put<APIResult>(`${this.originalPathStatus}/updatePatientStatus/${orderId}`, { patientStatus: patientStatus });
+    }
+    
   }

@@ -10,23 +10,23 @@ export class ChartsService {
   constructor(private http:HttpClient) { }
 
   Getchartinfo(): Observable<any> {
-    return this.http.get("http://localhost:8000/sales");
+    return this.http.get("http://localhost:3000/sales");
   }
 
   patients(): Observable<PatientData[]> {
-    return this.http.get<PatientData[]>("http://localhost:8000/patients");
+    return this.http.get<PatientData[]>("http://localhost:3000/patients");
   }
 
   nurses(): Observable<NurseData[]> {
-    return this.http.get<NurseData[]>("http://localhost:8000/nurses");
+    return this.http.get<NurseData[]>("http://localhost:3000/nurses");
   }
 
   orders(): Observable<OrderData[]> {
-    return this.http.get<OrderData[]>("http://localhost:8000/orders");
+    return this.http.get<OrderData[]>("http://localhost:3000/orders");
   }
 
   bookings(): Observable<BookingData[]> {
-    return this.http.get<BookingData[]>("http://localhost:8000/bookings");
+    return this.http.get<BookingData[]>("http://localhost:3000/bookings");
   }
 
 }
