@@ -6,3 +6,11 @@
 .rejected{
     color: red;
 }
+.status-text-success{
+    color: green !important;
+    font-weight: 600 !important;
+}
+.status-text-fail{
+    color: red !important;
+    font-weight: 600 !important;
+}

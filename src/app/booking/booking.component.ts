@@ -50,6 +50,12 @@ export class BookingComponent implements OnInit {
   }
  
  
-
+  getStatusCellStyle(status: string): any {
+    if (status === 'accepted') {
+      return {'status-text-success': true };
+    } else {
+      return { 'status-text-fail': true };
+    }
+  }
  
 }

@@ -52,8 +52,8 @@
           <!-- <td mat-cell *matCellDef="let element"> {{element.joinedDate}} </td> -->
         </ng-container>
         <ng-container matColumnDef="phone">
-         <th mat-header-cell *matHeaderCellDef> delete </th>
-         <td mat-cell *matCellDef="let element"><a  (click)="deleteRow(element._id)"> <i class="fa fa-trash fa-fade" style="cursor: pointer;"></i> </a> </td>
+         <th mat-header-cell *matHeaderCellDef> Block </th>
+         <td mat-cell *matCellDef="let element"><a  (click)="deleteRow(element._id)"> <i class="fa fa-ban fa-fade" style="cursor: pointer; color: red"></i> </a> </td>
        </ng-container> <!-- Symbol Column -->
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
