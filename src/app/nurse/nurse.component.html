@@ -10,7 +10,7 @@
   
       <!-- Position Column -->
       <ng-container matColumnDef="profile">
-        <th mat-header-cell *matHeaderCellDef> الصورة </th>
+        <th mat-header-cell *matHeaderCellDef> Profile </th>
         <td mat-cell *matCellDef="let element"> 
           <img width="70px" height="70px"  class="img" src="http://localhost:3500/{{element.profile}}" alt="" srcset=""> </td>
       </ng-container>
@@ -23,28 +23,28 @@
     
       <!-- Weight Column -->
       <ng-container matColumnDef="age">
-        <th mat-header-cell *matHeaderCellDef> age </th>
+        <th mat-header-cell *matHeaderCellDef> Age </th>
         <td mat-cell *matCellDef="let element"> {{element.age}} </td>
       </ng-container>
   
       <!-- Symbol Column -->
       <ng-container matColumnDef="region">
-        <th mat-header-cell *matHeaderCellDef> region </th>
+        <th mat-header-cell *matHeaderCellDef> Region </th>
         <td mat-cell *matCellDef="let element"> {{element.region}} </td>
       </ng-container>
   
        <!-- Symbol Column -->
        <ng-container matColumnDef="address">
-        <th mat-header-cell *matHeaderCellDef> address </th>
+        <th mat-header-cell *matHeaderCellDef> Address </th>
         <td mat-cell *matCellDef="let element"> {{element.address}} </td>
       </ng-container>
        <!-- Symbol Column -->
        <ng-container matColumnDef="email">
-         <th mat-header-cell *matHeaderCellDef> email </th>
+         <th mat-header-cell *matHeaderCellDef> Email </th>
          <td mat-cell *matCellDef="let element"> {{element.email  | StringLength: 10}} </td>
         </ng-container> <!-- Symbol Column -->
         <ng-container matColumnDef="gender">
-          <th mat-header-cell *matHeaderCellDef> gender </th>
+          <th mat-header-cell *matHeaderCellDef> Gender </th>
           <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
         </ng-container> <!-- Symbol Column -->
         <ng-container matColumnDef="date">

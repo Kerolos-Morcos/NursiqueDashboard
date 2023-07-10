@@ -4,59 +4,40 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
  import { PatientService } from '../services/patient.service';
 import { IPatient } from '../models/patient';
-
- 
- 
 @Component({
   selector: 'app-patient',
   templateUrl: './patient.component.html',
   styleUrls: ['./patient.component.css']
 })
 export class PatientComponent implements OnInit, AfterViewInit {
-
   dataSource = new MatTableDataSource<IPatient>([]);
- 
   patients: IPatient[] = [];
-
   displayedColumns: string[] = [
     'profile',
     'name',
     'email',
-    // 'password',
     'phoneNumber',
-    // 'joinedDate',
-    // 'cart',
-    // 'order',
-    // 'nationalId',
     'age',
     'gender',
-    // 'region',
-    // 'address',
     'isBlocked',
     'block',
   ];
 
    @ViewChild(MatPaginator) paginator!: MatPaginator;
-
   constructor(private  patSrv: PatientService) {}
-
   ngOnInit() {
     this.patSrv.getAll().subscribe({
-      next: (res) => {
-        
+      next: (res) => {  
         const patients = res.data as IPatient[];
         this.dataSource.data = patients;
         this.dataSource.paginator = this.paginator;
       }
     });
   }
-
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
-
-  data: any; // assuming that you have defined this variable in your component
-
+  data: any;
   // block(id: string) {
   //   this.patSrv.block(id, this.data).subscribe({
   //     next: (res) => {
@@ -74,27 +55,21 @@ export class PatientComponent implements OnInit, AfterViewInit {
   //     }
   //   });
   // }
-
   block(id: string) {
     this.patSrv.block(id, this.data).subscribe({
       next: (res) => {
-        // Toggle the isBlocked value of the patient in the data source
         const patient = this.dataSource.data.find((p) => p._id === id);
         if (patient) {
           patient.isBlocked = !patient.isBlocked;
         }
-        
-        // Update the data source and paginator
         this.dataSource.data = [...this.dataSource.data];
         this.dataSource.paginator = this.paginator;
       },
       error: (err) => {
         console.log(err);
-        // Handle the error as needed
       }
     });
   }
-  
 
   search(value: string): void {
     this.patSrv.search(value).subscribe({
@@ -109,7 +84,6 @@ export class PatientComponent implements OnInit, AfterViewInit {
     });
   }
 
- 
   test(event:any,value: string){
     event.preventDefault()
     console.log(event)
