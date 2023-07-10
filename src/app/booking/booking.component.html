@@ -2,7 +2,7 @@
   <table mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="joinedDate">
       <th mat-header-cell *matHeaderCellDef>Booking Time</th>
-      <td mat-cell *matCellDef="let element">{{ element.joinedDate | date }}</td>
+      <td mat-cell *matCellDef="let element">{{ element.period.times }} {{element.period.day}}</td>
     </ng-container>
 
     <ng-container matColumnDef="userAddress">
