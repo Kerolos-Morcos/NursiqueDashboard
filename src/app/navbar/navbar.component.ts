@@ -21,7 +21,7 @@ import { Location } from '@angular/common';
             position: 'absolute',
             // top: '43px',
             left: '23.8px',
-            width: '96.45%',
+            width: '95.98%',
           })
         ],
         { optional: true }),
