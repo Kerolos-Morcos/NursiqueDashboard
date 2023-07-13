@@ -1,61 +1,72 @@
-import { Component , OnInit,ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
-import { MatDialog } from '@angular/material/dialog';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-import { MatButtonModule } from '@angular/material/button';
-import { BookingnursingService } from '../services/Bookingnursing.service';
-import { booking } from '../models/Ibooking';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-booking',
-  templateUrl: './booking.component.html',
-  styleUrls: ['./booking.component.css']
+  templateUrl: 'booking.component.html',
+  styleUrls: ['booking.component.css']
 })
-
-export class BookingComponent implements OnInit {
-  hideParagraph = true;
-  dataSource = new MatTableDataSource<booking>([]);
-  bookings: booking[] = [];
-
-  displayedColumns: string[] = [
-    'joinedDate',
-    'userName', 
-    'userCity',
-    'userAddress',
-    // 'service',
-    'price',
-    'status',
+export class BookingComponent {
+  dataSource = [
+    {
+      period: { times: '2 am - 3 am', day: 'الاثنين' },
+      userAddress: 'اسوان الجديدة',
+      userCity: 'اسوان',
+      userName: 'احمد عبد العليم',
+      price: 250,
+      status: 'accepted'
+    },
+    {
+      period: { times: '4 pm - 5 pm', day: 'الأحد' },
+      userAddress: 'السيل',
+      userCity: 'اسوان',
+      userName: 'عمر الأمير',
+      price: 400,
+      status: 'rejected'
+    },
+    {
+      period: { times: '10 am - 11 am', day: 'الثلاثاء' },
+      userAddress: 'كيما',
+      userCity: 'اسوان',
+      userName: 'محمد خالد',
+      price: 100,
+      status: 'rejected'
+    },
+    {
+      period: { times: '7 pm - 8 pm', day: 'الجمعة' },
+      userAddress: 'التأمين',
+      userCity: 'اسوان',
+      userName: 'ابراهيم حسني',
+      price: 250,
+      status: 'accepted'
+    },
+    {
+      period: { times: '9 am - 10 am', day: 'الأربعاء' },
+      userAddress: 'كيما',
+      userCity: 'اسوان',
+      userName: 'مدثر يوسف',
+      price: 600,
+      status: 'rejected'
+    },
+    {
+      period: { times: '1 am - 2 am', day: 'الأحد' },
+      userAddress: 'المحطة',
+      userCity: 'اسوان',
+      userName: 'حمادة محمد',
+      price: 150,
+      status: 'accepted'
+    },
+    // Add more static data objects here if needed
   ];
 
-  @ViewChild(MatPaginator)
-  paginator!: MatPaginator;
+  displayedColumns: string[] = ['joinedDate', 'userName' ,'userAddress', 'userCity', 'price', 'status'];
 
-  constructor(private bookingNursingService:BookingnursingService) { }
-
-  ngOnInit() {
-    this.bookingNursingService.getAll().subscribe({
-      next: (res: { data: booking[]; }) => {
-        const bookings = res.data as booking[];
-        console.log(res.data);
-        this.dataSource.data = bookings;
-        this.dataSource.paginator = this.paginator;
-      }
-    });
-  }
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-  }
- 
- 
-  getStatusCellStyle(status: string): any {
-    if (status === 'accepted') {
-      return {'status-text-success': true };
-    } else {
-      return { 'status-text-fail': true };
+  getStatusCellStyle(status: string): string {
+    switch (status) {
+      case 'accepted':
+        return 'status-text-success';
+      case 'rejected':
+        return 'status-text-fail'; 
     }
+    return '';
   }
- 
 }
